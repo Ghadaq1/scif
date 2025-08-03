@@ -650,40 +650,38 @@ p {
   color: #5D50D0;
 }
 
-/* ===== HERO SECTION WITHOUT IMAGE ===== */
+/* HERO BACKGROUND THAT DOESN’T PUSH PAGE */
 .header-hero {
-  position: relative;
-  z-index: 5;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  /* Fixed, stable size */
-  height: 60vh;        /* Takes 60% of the screen height */
-  min-height: 400px;   /* Keeps it decent on small screens */
+  position: fixed; /* Stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh; /* Visual height */
+  background: url('assets/images/header/scifile-webpage1.jpg') center/cover no-repeat;
   display: flex;
-  align-items: center; /* Vertically center content */
   justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 0 20px;     /* Small horizontal padding */
+  z-index: -1; /* Push behind content */
+}
+
+/* Text styling */
+.header-hero-content {
+  color: #2e2e2e;
 }
 
 .header-hero-content .header-sub-title {
   font-size: 38px;
   font-weight: 300;
-  color: #2e2e2e;
-  margin-bottom: 10px;
 }
 
 .header-hero-content .header-title {
   font-size: 38px;
   font-weight: 700;
-  color: #2e2e2e;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
 
 .header-hero-content .text {
-  color: #2e2e2e;
   margin-bottom: 25px;
 }
 
@@ -701,18 +699,12 @@ p {
   background: #555;
 }
 
-/* Responsive */
-@media (max-width: 767px) {
-  .header-hero {
-    height: 50vh;
-    min-height: 300px;
-    padding: 0 10px;
-  }
-  .header-hero-content .header-sub-title,
-  .header-hero-content .header-title {
-    font-size: 28px;
-  }
+/* Push the actual page content down so it doesn’t overlap */
+.content {
+  margin-top: 60vh; /* Same as hero height */
+  padding: 40px 0;
 }
+
 
 
 
