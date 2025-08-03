@@ -679,7 +679,7 @@ p {
 .header-hero-content .header-sub-title {
   font-size: 38px;
   font-weight: 300;
-  color: #fff;
+  color: #2e2e2e;
 }
 
 @media (max-width: 767px) {
@@ -697,7 +697,7 @@ p {
 .header-hero-content .header-title {
   font-size: 38px;
   font-weight: 700;
-  color: #fff;
+  color: #2e2e2e;
 }
 
 @media (max-width: 767px) {
@@ -713,7 +713,7 @@ p {
 }
 
 .header-hero-content .text {
-  color: #fff;
+  color: #2e2e2e;
   margin-top: 30px;
 }
 
