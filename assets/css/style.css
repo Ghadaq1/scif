@@ -650,30 +650,20 @@ p {
   color: #5D50D0;
 }
 
-/*===== HEADER HERO =====*/
+/* ===== HERO SECTION ===== */
 .header-hero {
   position: relative;
   z-index: 5;
-  background-position: bottom center;
-}
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-#particles-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.header-hero-content {
-  padding-top: 180px;
-}
-
-@media (max-width: 767px) {
-  .header-hero-content {
-    padding-top: 130px;
-  }
+  /* Control section height */
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 0;
 }
 
 .header-hero-content .header-sub-title {
@@ -682,62 +672,54 @@ p {
   color: #2e2e2e;
 }
 
-@media (max-width: 767px) {
-  .header-hero-content .header-sub-title {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .header-hero-content .header-sub-title {
-    font-size: 30px;
-  }
-}
-
 .header-hero-content .header-title {
   font-size: 38px;
   font-weight: 700;
   color: #2e2e2e;
 }
 
-@media (max-width: 767px) {
-  .header-hero-content .header-title {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .header-hero-content .header-title {
-    font-size: 30px;
-  }
-}
-
 .header-hero-content .text {
   color: #2e2e2e;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .header-hero-content .main-btn {
-  margin-top: 40px;
+  margin-top: 30px;
+  display: inline-block;
+  padding: 12px 30px;
+  background: #2e2e2e;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.header-hero-content .main-btn:hover {
+  background: #555;
 }
 
 .header-hero-image {
-  padding-top: 45px;
+  padding-top: 30px;
 }
 
 .header-hero-image img {
-  max-width: 650px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
 }
 
+/* Responsive */
 @media (max-width: 767px) {
-  .header-hero-image img {
-    max-width: 100%;
+  .header-hero {
+    min-height: 50vh;
+    padding: 40px 0;
   }
-}
-
-@media (max-width: 767px) {
-  .header-hero-image {
-    padding-top: 30px;
+  .header-hero-content .header-sub-title,
+  .header-hero-content .header-title {
+    font-size: 28px;
+  }
+  .header-hero-image img {
+    max-width: 250px;
   }
 }
 
